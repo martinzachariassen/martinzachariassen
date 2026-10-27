@@ -9,8 +9,8 @@ behind the banner shows through.
 
 The animation loops every CYCLE seconds: the mark rises in, the M is traced
 and cut out, "mlz" is typed behind a gliding cursor and the cursor settles
-into the period. The lockup glitches like the letters on mlz.no; then the
-period opens back into the cursor, which backspaces the word, the M closes,
+into the period. The lockup holds for a moment; then the period opens
+back into the cursor, which backspaces the word, the M closes,
 the mark lifts away and it starts over. Every element shares the same
 cycle, so the timeline below is in seconds and turned into keyframe
 percentages. Without animation support (or with reduced motion) every
@@ -53,7 +53,7 @@ PX = MARK / 32  # one unit of the mark's 32 × 32 grid, in pixels
 M_POINTS = "7,25 7,7 11.5,7 16,18.5 20.5,7 25,7 25,25"
 
 # Timeline, in seconds from the start of a cycle.
-CYCLE = 7.5
+CYCLE = 6.1
 RISE_AT, RISE = 0.1, 0.9  # the mark rises in ("rise" on mlz.no)
 TRACE_AT, TRACE = 0.45, 0.8  # the M is drawn ...
 CUT_AT, CUT = 0.95, 0.4  # ... and filled while the line finishes
@@ -62,13 +62,12 @@ TYPED = (1.7, 1.84, 2.03)  # each letter; the gaps are uneven, like a hand
 GLIDE = 0.07  # the cursor slides to the next cell
 SETTLE_AT, SETTLE = 2.4, 0.45  # the cursor shrinks into the period
 XFADE = 0.18  # cursor and period crossfade: the glyph is round, the cursor square
-GLITCH_AT = 3.6
-OPEN_AT = 5.0  # the period opens back into the cursor
+OPEN_AT = 3.6  # the period opens back into the cursor, 0.75s after it settles
 GROW = 0.4
-DEL_AT, DEL_STEP = 5.75, 0.1  # backspacing, at key-repeat pace
-CURSOR_OUT = 6.1
-CLOSE_AT = 6.2  # the M closes, then the mark lifts away
-LEAVE_AT, LEAVE = 6.35, 0.45
+DEL_AT, DEL_STEP = 4.35, 0.1  # backspacing, at key-repeat pace
+CURSOR_OUT = 4.7
+CLOSE_AT = 4.8  # the M closes, then the mark lifts away
+LEAVE_AT, LEAVE = 4.95, 0.45
 
 FADE = 0.12  # a smooth blink edge
 EASE = "cubic-bezier(0.2, 0.7, 0.2, 1)"  # var(--ease) on mlz.no
@@ -228,43 +227,6 @@ def animations(boxes, geo):
         ),
     ]
 
-    # The glitch from mlz.no (hero.css), 1.5× for the banner's size: six
-    # stepped frames over 0.4s with a colour split, then a smaller echo.
-    burst = [
-        (0.0, (-3, -1.5), 3, 1),
-        (0.064, (3, 1.5), 3, 1),
-        (0.128, (-1.5, 0), 3, 0.75),
-        (0.192, (3, -1.5), -3, 1),
-        (0.256, (-1.5, 1.5), 1.5, 1),
-        (0.32, (0, 0), 0, 1),
-        (0.62, (2, -1), -2, 1),
-        (0.68, (-1, 0), 1.5, 1),
-        (0.74, (0, 0), 0, 1),
-    ]
-    still = "opacity: 1; transform: translate(0, 0)"
-    css.append(
-        keyframes(
-            "jitter",
-            [(0, still)]
-            + [(GLITCH_AT + t, f"opacity: {o}; transform: translate({x}px, {y}px)") for t, (x, y), _, o in burst]
-            + [(CYCLE, still)],
-            timing=HOLD,
-        )
-    )
-    for name, sign in (("ghost-a", 1), ("ghost-b", -1)):
-        css.append(
-            keyframes(
-                name,
-                [(0, "opacity: 0; transform: translateX(0)")]
-                + [
-                    (GLITCH_AT + t, f"opacity: {int(bool(s))}; transform: translateX({s * sign}px)")
-                    for t, _, s, _ in burst
-                ]
-                + [(CYCLE, "opacity: 0; transform: translateX(0)")],
-                timing=HOLD,
-            )
-        )
-
     for i in range(n):
         css.append(
             keyframes(
@@ -290,20 +252,14 @@ def svg(c, font, boxes):
 svg {{ shape-rendering: geometricPrecision; text-rendering: geometricPrecision; }}
 text {{ font-family: "Plex", ui-monospace, Menlo, monospace; font-weight: 700; font-size: {SIZE}px; fill: {c["fg"]}; }}
 .period {{ fill: {c["accent-deep"]}; }}
-.ghost-a text {{ fill: {c["accent"]}; }}
-.ghost-b text {{ fill: {c["glitch-2"]}; }}
 .trace {{ opacity: 0; fill: none; stroke: #000; stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 100; }}
 .cursor {{ opacity: 0; fill: {c["accent-deep"]}; transform-box: fill-box; transform-origin: 0 0; }}
-.ghost-a, .ghost-b {{ opacity: 0; }}
 
 .mark {{ transform-box: fill-box; transform-origin: center; animation: mark {loop}; }}
 .cut {{ animation: cut {loop}; }}
 .trace {{ animation: trace {loop}; }}
 .period {{ animation: period {loop}; }}
 .cursor {{ animation: cursor-move {loop}, cursor-blink {loop}; }}
-.glitch {{ animation: jitter {loop}; }}
-.ghost-a {{ animation: ghost-a {loop}; }}
-.ghost-b {{ animation: ghost-b {loop}; }}
 
 {animations(boxes, geo)}
 
@@ -326,12 +282,7 @@ text {{ font-family: "Plex", ui-monospace, Menlo, monospace; font-weight: 700; f
   </g>
 </g>
 
-<!-- The colour-split layers sit behind the word and jitter with it. -->
-<g class="glitch">
-  <g class="ghost-a">{word}</g>
-  <g class="ghost-b">{word}</g>
-  <g class="word">{word}</g>
-</g>
+<g class="word">{word}</g>
 <rect class="cursor" x="{TX + cx:.2f}" y="{cy:.2f}" width="{cw:.2f}" height="{ch:.2f}"/>
 </svg>
 """
