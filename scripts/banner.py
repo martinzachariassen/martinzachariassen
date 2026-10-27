@@ -53,7 +53,7 @@ PX = MARK / 32  # one unit of the mark's 32 × 32 grid, in pixels
 M_POINTS = "7,25 7,7 11.5,7 16,18.5 20.5,7 25,7 25,25"
 
 # Timeline, in seconds from the start of a cycle.
-CYCLE = 6.5
+CYCLE = 6.1
 RISE_AT, RISE = 0.1, 0.9  # the mark rises in ("rise" on mlz.no)
 TRACE_AT, TRACE = 0.45, 0.8  # the M is drawn ...
 CUT_AT, CUT = 0.95, 0.4  # ... and filled while the line finishes
@@ -62,12 +62,12 @@ TYPED = (1.7, 1.84, 2.03)  # each letter; the gaps are uneven, like a hand
 GLIDE = 0.07  # the cursor slides to the next cell
 SETTLE_AT, SETTLE = 2.4, 0.45  # the cursor shrinks into the period
 XFADE = 0.18  # cursor and period crossfade: the glyph is round, the cursor square
-OPEN_AT = 4.0  # the period opens back into the cursor
+OPEN_AT = 3.6  # the period opens back into the cursor, 0.75s after it settles
 GROW = 0.4
-DEL_AT, DEL_STEP = 4.75, 0.1  # backspacing, at key-repeat pace
-CURSOR_OUT = 5.1
-CLOSE_AT = 5.2  # the M closes, then the mark lifts away
-LEAVE_AT, LEAVE = 5.35, 0.45
+DEL_AT, DEL_STEP = 4.35, 0.1  # backspacing, at key-repeat pace
+CURSOR_OUT = 4.7
+CLOSE_AT = 4.8  # the M closes, then the mark lifts away
+LEAVE_AT, LEAVE = 4.95, 0.45
 
 FADE = 0.12  # a smooth blink edge
 EASE = "cubic-bezier(0.2, 0.7, 0.2, 1)"  # var(--ease) on mlz.no

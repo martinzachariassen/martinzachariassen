@@ -7,100 +7,100 @@ text { font-family: "Plex", ui-monospace, Menlo, monospace; font-weight: 700; fo
 .trace { opacity: 0; fill: none; stroke: #000; stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 100; }
 .cursor { opacity: 0; fill: #a29aff; transform-box: fill-box; transform-origin: 0 0; }
 
-.mark { transform-box: fill-box; transform-origin: center; animation: mark 6.5s infinite; }
-.cut { animation: cut 6.5s infinite; }
-.trace { animation: trace 6.5s infinite; }
-.period { animation: period 6.5s infinite; }
-.cursor { animation: cursor-move 6.5s infinite, cursor-blink 6.5s infinite; }
+.mark { transform-box: fill-box; transform-origin: center; animation: mark 6.1s infinite; }
+.cut { animation: cut 6.1s infinite; }
+.trace { animation: trace 6.1s infinite; }
+.period { animation: period 6.1s infinite; }
+.cursor { animation: cursor-move 6.1s infinite, cursor-blink 6.1s infinite; }
 
 @keyframes mark {
   0.000% { opacity: 0; transform: translateY(2.86px) scale(0.96); animation-timing-function: step-end; }
-  1.538% { opacity: 0; transform: translateY(2.86px) scale(0.96); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
-  15.385% { opacity: 1; transform: translateY(0) scale(1); animation-timing-function: step-end; }
-  82.308% { opacity: 1; transform: translateY(0) scale(1); animation-timing-function: cubic-bezier(0.7, 0, 0.84, 0); }
-  89.231% { opacity: 0; transform: translateY(-2.86px) scale(0.96); animation-timing-function: step-end; }
+  1.639% { opacity: 0; transform: translateY(2.86px) scale(0.96); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
+  16.393% { opacity: 1; transform: translateY(0) scale(1); animation-timing-function: step-end; }
+  81.148% { opacity: 1; transform: translateY(0) scale(1); animation-timing-function: cubic-bezier(0.7, 0, 0.84, 0); }
+  88.525% { opacity: 0; transform: translateY(-2.86px) scale(0.96); animation-timing-function: step-end; }
   100.000% { opacity: 0; transform: translateY(-2.86px) scale(0.96); animation-timing-function: step-end; }
 }
 @keyframes cut {
   0.000% { opacity: 0; animation-timing-function: step-end; }
-  14.615% { opacity: 0; animation-timing-function: ease-out; }
-  20.769% { opacity: 1; animation-timing-function: step-end; }
-  80.000% { opacity: 1; animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
-  83.846% { opacity: 0; animation-timing-function: step-end; }
+  15.574% { opacity: 0; animation-timing-function: ease-out; }
+  22.131% { opacity: 1; animation-timing-function: step-end; }
+  78.689% { opacity: 1; animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
+  82.787% { opacity: 0; animation-timing-function: step-end; }
   100.000% { opacity: 0; animation-timing-function: step-end; }
 }
 @keyframes trace {
   0.000% { opacity: 0; stroke-dashoffset: 100; animation-timing-function: step-end; }
-  6.923% { opacity: 1; stroke-dashoffset: 100; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-  19.231% { opacity: 1; stroke-dashoffset: 0; animation-timing-function: ease-out; }
-  23.077% { opacity: 0; stroke-dashoffset: 0; animation-timing-function: step-end; }
+  7.377% { opacity: 1; stroke-dashoffset: 100; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  20.492% { opacity: 1; stroke-dashoffset: 0; animation-timing-function: ease-out; }
+  24.590% { opacity: 0; stroke-dashoffset: 0; animation-timing-function: step-end; }
   100.000% { opacity: 0; stroke-dashoffset: 0; animation-timing-function: step-end; }
 }
 @keyframes period {
   0.000% { opacity: 0; animation-timing-function: step-end; }
-  41.077% { opacity: 0; animation-timing-function: linear; }
-  43.846% { opacity: 1; animation-timing-function: step-end; }
-  61.538% { opacity: 1; animation-timing-function: linear; }
-  64.308% { opacity: 0; animation-timing-function: step-end; }
+  43.770% { opacity: 0; animation-timing-function: linear; }
+  46.721% { opacity: 1; animation-timing-function: step-end; }
+  59.016% { opacity: 1; animation-timing-function: linear; }
+  61.967% { opacity: 0; animation-timing-function: step-end; }
   100.000% { opacity: 0; animation-timing-function: step-end; }
 }
 @keyframes cursor-move {
   0.000% { transform: translate(0.00px, 0) scale(1, 1); animation-timing-function: step-end; }
-  26.154% { transform: translate(0.00px, 0) scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
-  27.231% { transform: translate(54.15px, 0) scale(1, 1); animation-timing-function: step-end; }
-  28.308% { transform: translate(54.15px, 0) scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
-  29.385% { transform: translate(108.30px, 0) scale(1, 1); animation-timing-function: step-end; }
-  31.231% { transform: translate(108.30px, 0) scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
-  32.308% { transform: translate(162.45px, 0) scale(1, 1); animation-timing-function: step-end; }
-  36.923% { transform: translate(162.45px, 0) scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
-  43.846% { transform: translate(176.22px, 52.34px) scale(0.4200, 0.2716); animation-timing-function: step-end; }
-  64.308% { transform: translate(176.22px, 52.34px) scale(0.4200, 0.2716); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
-  70.462% { transform: translate(162.45px, 0) scale(1, 1); animation-timing-function: step-end; }
-  73.077% { transform: translate(162.45px, 0) scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
-  74.154% { transform: translate(108.30px, 0) scale(1, 1); animation-timing-function: step-end; }
-  74.615% { transform: translate(108.30px, 0) scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
-  75.692% { transform: translate(54.15px, 0) scale(1, 1); animation-timing-function: step-end; }
-  76.154% { transform: translate(54.15px, 0) scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
-  77.231% { transform: translate(0.00px, 0) scale(1, 1); animation-timing-function: step-end; }
+  27.869% { transform: translate(0.00px, 0) scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
+  29.016% { transform: translate(54.15px, 0) scale(1, 1); animation-timing-function: step-end; }
+  30.164% { transform: translate(54.15px, 0) scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
+  31.311% { transform: translate(108.30px, 0) scale(1, 1); animation-timing-function: step-end; }
+  33.279% { transform: translate(108.30px, 0) scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
+  34.426% { transform: translate(162.45px, 0) scale(1, 1); animation-timing-function: step-end; }
+  39.344% { transform: translate(162.45px, 0) scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
+  46.721% { transform: translate(176.22px, 52.34px) scale(0.4200, 0.2716); animation-timing-function: step-end; }
+  61.967% { transform: translate(176.22px, 52.34px) scale(0.4200, 0.2716); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
+  68.525% { transform: translate(162.45px, 0) scale(1, 1); animation-timing-function: step-end; }
+  71.311% { transform: translate(162.45px, 0) scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
+  72.459% { transform: translate(108.30px, 0) scale(1, 1); animation-timing-function: step-end; }
+  72.951% { transform: translate(108.30px, 0) scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
+  74.098% { transform: translate(54.15px, 0) scale(1, 1); animation-timing-function: step-end; }
+  74.590% { transform: translate(54.15px, 0) scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1); }
+  75.738% { transform: translate(0.00px, 0) scale(1, 1); animation-timing-function: step-end; }
   100.000% { transform: translate(0.00px, 0) scale(1, 1); animation-timing-function: step-end; }
 }
 @keyframes cursor-blink {
   0.000% { opacity: 0; animation-timing-function: step-end; }
-  13.846% { opacity: 0; animation-timing-function: ease-in-out; }
-  15.692% { opacity: 1; animation-timing-function: step-end; }
-  19.231% { opacity: 1; animation-timing-function: ease-in-out; }
-  21.077% { opacity: 0; animation-timing-function: step-end; }
-  23.077% { opacity: 0; animation-timing-function: ease-in-out; }
-  24.923% { opacity: 1; animation-timing-function: step-end; }
-  41.077% { opacity: 1; animation-timing-function: linear; }
-  43.846% { opacity: 0; animation-timing-function: step-end; }
-  61.538% { opacity: 0; animation-timing-function: linear; }
-  64.308% { opacity: 1; animation-timing-function: step-end; }
-  78.462% { opacity: 1; animation-timing-function: ease-in-out; }
-  80.308% { opacity: 0; animation-timing-function: step-end; }
+  14.754% { opacity: 0; animation-timing-function: ease-in-out; }
+  16.721% { opacity: 1; animation-timing-function: step-end; }
+  20.492% { opacity: 1; animation-timing-function: ease-in-out; }
+  22.459% { opacity: 0; animation-timing-function: step-end; }
+  24.590% { opacity: 0; animation-timing-function: ease-in-out; }
+  26.557% { opacity: 1; animation-timing-function: step-end; }
+  43.770% { opacity: 1; animation-timing-function: linear; }
+  46.721% { opacity: 0; animation-timing-function: step-end; }
+  59.016% { opacity: 0; animation-timing-function: linear; }
+  61.967% { opacity: 1; animation-timing-function: step-end; }
+  77.049% { opacity: 1; animation-timing-function: ease-in-out; }
+  79.016% { opacity: 0; animation-timing-function: step-end; }
   100.000% { opacity: 0; animation-timing-function: step-end; }
 }
 @keyframes ch0 {
   0.000% { opacity: 0; animation-timing-function: step-end; }
-  26.154% { opacity: 1; animation-timing-function: step-end; }
-  76.154% { opacity: 0; animation-timing-function: step-end; }
+  27.869% { opacity: 1; animation-timing-function: step-end; }
+  74.590% { opacity: 0; animation-timing-function: step-end; }
   100.000% { opacity: 0; animation-timing-function: step-end; }
 }
-.ch0 { animation: ch0 6.5s infinite; }
+.ch0 { animation: ch0 6.1s infinite; }
 @keyframes ch1 {
   0.000% { opacity: 0; animation-timing-function: step-end; }
-  28.308% { opacity: 1; animation-timing-function: step-end; }
-  74.615% { opacity: 0; animation-timing-function: step-end; }
+  30.164% { opacity: 1; animation-timing-function: step-end; }
+  72.951% { opacity: 0; animation-timing-function: step-end; }
   100.000% { opacity: 0; animation-timing-function: step-end; }
 }
-.ch1 { animation: ch1 6.5s infinite; }
+.ch1 { animation: ch1 6.1s infinite; }
 @keyframes ch2 {
   0.000% { opacity: 0; animation-timing-function: step-end; }
-  31.231% { opacity: 1; animation-timing-function: step-end; }
-  73.077% { opacity: 0; animation-timing-function: step-end; }
+  33.279% { opacity: 1; animation-timing-function: step-end; }
+  71.311% { opacity: 0; animation-timing-function: step-end; }
   100.000% { opacity: 0; animation-timing-function: step-end; }
 }
-.ch2 { animation: ch2 6.5s infinite; }
+.ch2 { animation: ch2 6.1s infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; }
