@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 240" width="1280" height="240" role="img" aria-label="mlz.">
 <style>
-@font-face { font-family: "Plex"; font-weight: 700; src: url(data:font/woff2;base64,d09GMgABAAAAAAUAABEAAAAACigAAASlAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbIBwwBmAARAhECYJzERAKhEiEJQE2AiQDDAsMAAQgBYJiByAMg1gb1QgAHge5ifWiNVsscfIxBR0P8Gu192fnhNnDxWcxaa6VJZO8qQ7ioeCNZol2JJsjXW02Gz2XsHkxsxKoeDrR0AW1yopamwb6H4ez8NWa2rv9WR8giyBjyUW52Kj7D2EBWAFrQGFapSoDJMugUFW4qtg2Qq/SBgwq0/TbgO0PCEANABEEwRAEJDxEaMq0sjrg0YAcIACJMBHwmf+zbFyeGQNxS/fcBIjnqUJx1BQ9w4CovBsHZkuBsEZfGFpdh1KvwwyFoTkDCMCHzpxUTtBFEVbi8P8XcUBmIACimHoKdICBCOjaJjB0J1oUUI1HAf2MW8mhnzH9k/MvTucnIQBorkqbVfGKjLojx5wveimx7KrrQE0eTSjGhtFKK8m0WUSDJnpKfr5lBvrMVggL0schXJSykC+T1/YJAV67JlyB+nQg+cN5clg35lN9MqhXx/Ig3KdDgVzoOq2mybeZnHQoz9x00mEaGeruk+Ouwjtv1H9S6k9ktekwkdWlkjyh5B4bNjc3p4Qr6FxcnD8poYOMZOFG+Haaf30zTJ/ZRC50W9BU3SSfmNK6xqfwGkki+fKrBenaPaW1NPiWY2/L6wPrw457U66F7dXSfKb4YolPaOOay2XLsK8kn5DJ1uXOJdtxitfsN8AJbYqsiwtdpyrhxAJ3/ASS7spU1vPN7qVQXrhC6DO7tik/z8L458IBwXgqBkxOfYAKgASIgenAAgBiEFIgzLdL/JN6jcWCCmlpNWiKjBrUF94WTy0tnrl27ZF+MirB21eT8mUeLqLBmpBC0FdXd/lDCNsfqfB7TrybvOvG//O7B02vt343vR29fw53723P2YZGdmH7a2NbjF3u3N/jd9ak8e1WO5aKasxiUdbdmnRYtFpnX78qBs/WhqpH8OnsA0n8dDvgCURF3bBRMihgaqqg+7d+gkbGNRtBEAkMDGtAndoM3QApPJqFBhn23YCBTwn8BaQCpEQ8wO3mCujd9QBK0AA87h4wc+Y74Ro8Rgi1T2AE17BR8roC92+h0Hs5u05gpyeCcNVDUJ/Yt8eTF74uMQ8zqFkYL6TVgHr0BZ7hqIC4t+sHAQGR97eaLT1YW3/M7+oi/gtfxxT+wc+KP2eIeW00KvomEFAAAfwSDUcpcQ4YjYJAInh/k8gjyvFOACr4QwABIAERfAmAKi0wFAsAVoD9EOJ66ym8OT0WY01P8/NQz7D58ZEs4q/JJk1ZNmPYoCFziBhRoiUiiuUoR042O2NKBCLbmDEkKjVrSfTrtD+xIEN9IuJfXmVMvyVEuUkTJuWYNKZPjAixUk9Hd9GoqOTCscm8OdITDV7tjFnDafKkrWVvw6bg8usDgvNkoLenEC2qd3hCh9rQlw38iRyMVEB1b6s3fRxXQ/IlC+ZmPDifkixKYEG9KxYp0BX2arQh9XIFsFM1Rp1qCUJIVI0VJ5TERkdzHIk7U0ZAgo+0T+NlZ04Jz0+IQH01FQ87Ey2e5tR2jUVn/DCjUSodAxITjmqF5qroKQMB1zsD/wdrnspigfboaMBMnMKbYCB7MROzmI3Y6J4IcAov8SZ+lU5yiLq4yG6YJHtRj5cwmdwDAAA=) format("woff2"); }
+@font-face { font-family: "Plex"; font-weight: 700; src: url(data:font/woff2;base64,d09GMgABAAAAAAUEABEAAAAACigAAASpAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbIBwwBmAARAhECYJzERAKhEiEJQE2AiQDDAsMAAQgBYJiByAMg1gb1QgAHoNty3mqRARqRAkjP3/48fl4gJ9L309TuuuQizRicoz6hB06xAxYmLEDsnOd3OJDc6/vcgn/Nr9E2aUAiGoIqp0DzBSDIqHRmK3/cTgLX62pvduf9QGyCDKWXJSLjbr/EBaAFbAGFKZVqjJAsgwKVYWrim0j9CptwKAyTb8N2P6AAEoARAiCIgjI8GUgU6ZVNkLGAylAABmRotEz/+e6eW1+Esa2vsVpGOepQnHUGj0lQJTbjYPZUiCsMxiGFhVz2joscBTNGRDAh86cVMXIBdHW4/D/D3EgLiAAUcw9BaUoiEDXdkWRO/FiQREZB5pNWU+h2aT+yelnl9PjCAB6qNVpQ5JSE27Jt+gL6pVbc8U1UJLGFsqIYaLSGjJnFvGwRU/Jz7dMoHH2Y8qCFQ9DOLMyCekSFPZ7QkHXr4t6jDSWlk4dK7TChjGfa0yQ+rLyINpYOs3Kq5pW3xrQxk6U5mZuOVE6jY32DVpxlfDOGw2dWNnCbmlYMcYsjStMa8JKn7Fha1tbelSCz8XF+RMr0cHGs3DjfDvNv6iE0DibWXnVC1rrWq1ThX1qfAqvMctKp1ovF7Su3VN8zMG3nHhbXh/YGvO8N5VaxPqWljPFF0t8QhvXlstZhgPMW6dk0idXsdJ2XOI1+w1wQttjWRfnVU19HE4tcMdPIdmnMpX1/EqfpVBh1GNK4+yG1qJCC+OfiwJByVR2QkoHQD4gA2IwHSwAEENYAcJ8u0xQpn1LNk8lDrwGW1bQoJ1/kz25NHv66p1H+sm4DN27ouYu8XCWjJSEFMJgO32594HsfaDC7zj1dvL84f/DvYPm1lu/LTH4g3Oku2/qKuwt4sIBV8f23Ha0+2B/4KmuXS713rVaVJOursm6G5OOGm7d9r5+Vazb2xChjeBfUS6Vn+4BPEaotE6dR3oMU1c8xrf0eYTHxq00giJS2BnWQHFbgu+IFB3NomNCfNsa95giSHAqIErCF6TdUgHdXQcooSP4uvuCC+dyJ1LHRxil7TGKkTp1Hnn8MdrSM6F7OQ+dwoNOFOGqh+A+sW9fT1n4usQyyqAWUbKQVgPt6QWekaggbnD9IAIi719ymdOjj/kra/QvfMmk/+Db+b4JI22L0qPfAgUHCPBLNBytYMwBo1EIJIL3N5lChnzvEEC+IAQQABmI0IsACrWjSKwAVsF+iPB+6zmyRT0Vb1PPC3RfL3D34yNFzF9MNmPWmnljRoxaxMSLFScFUyZfFXay2XmzojF5Jk1iUakFS2JIp0OJZRkaFB3/8lqThqxiqsyYNiPfjEmD4kVLkHE6uotGRSUXhU3mzbGeaPZq5y0YS7MnbS17GzUFl94gCM6TQIOnCAdcQ3jMEbehLxoEMXhyooKiBqs3PY6rEUXShPHhdHA+J02skIK6KxUjxDEe1XijmhQI5kHVBI3qJAtnUjVRoggmd440JzH5ZMooSMiR9pn8eHBJKc9PGEC9msqXB2cOZJrTHJiMzgRixqZCFgZMzjjqICJXRU/ZKaSGBP4P1jyVyxXZp6Mdc3AWr4Od7McczGU24k73RYCzeITX8at0hqeolzfZCzNkP+p4BDPJfQAA) format("woff2"); }
 svg { shape-rendering: geometricPrecision; text-rendering: geometricPrecision; }
 text { font-family: "Plex", ui-monospace, Menlo, monospace; font-weight: 700; font-size: 95px; fill: #e9ebef; }
 .period { fill: #a29aff; }
@@ -12,6 +12,9 @@ text { font-family: "Plex", ui-monospace, Menlo, monospace; font-weight: 700; fo
 .trace { animation: trace 6.1s infinite; }
 .period { animation: period 6.1s infinite; }
 .cursor { animation: cursor-move 6.1s infinite, cursor-blink 6.1s infinite; }
+.ch0 { animation: ch0 6.1s infinite; }
+.ch1 { animation: ch1 6.1s infinite; }
+.ch2 { animation: ch2 6.1s infinite; }
 
 @keyframes mark {
   0.000% { opacity: 0; transform: translateY(2.86px) scale(0.96); animation-timing-function: step-end; }
@@ -86,21 +89,18 @@ text { font-family: "Plex", ui-monospace, Menlo, monospace; font-weight: 700; fo
   74.590% { opacity: 0; animation-timing-function: step-end; }
   100.000% { opacity: 0; animation-timing-function: step-end; }
 }
-.ch0 { animation: ch0 6.1s infinite; }
 @keyframes ch1 {
   0.000% { opacity: 0; animation-timing-function: step-end; }
   30.164% { opacity: 1; animation-timing-function: step-end; }
   72.951% { opacity: 0; animation-timing-function: step-end; }
   100.000% { opacity: 0; animation-timing-function: step-end; }
 }
-.ch1 { animation: ch1 6.1s infinite; }
 @keyframes ch2 {
   0.000% { opacity: 0; animation-timing-function: step-end; }
   33.279% { opacity: 1; animation-timing-function: step-end; }
   71.311% { opacity: 0; animation-timing-function: step-end; }
   100.000% { opacity: 0; animation-timing-function: step-end; }
 }
-.ch2 { animation: ch2 6.1s infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; }
